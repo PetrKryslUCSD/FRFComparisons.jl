@@ -1,5 +1,7 @@
 module FRFComparisons
 
+using LinearAlgebra
+
 export cssf, csac, frfsm
 
 """
@@ -77,6 +79,8 @@ function frfsm(f, d1, d2)
     sigma_squared = 6^2
     result = 0.0
     for j in eachindex(d1)
+        @assert abs(d1[j]) != 0.0
+        @assert abs(d2[j]) != 0.0
         ej = (10 * log10(abs(d1[j])^2)) - (10 * log10(abs(d2[j])^2))
         result += _erf(ej, 0, sigma_squared)
     end
