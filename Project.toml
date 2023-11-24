@@ -1,0 +1,7 @@
+name = "FRFComparisons"
+uuid = "cc5905fa-0ce8-439f-a041-9cb66eb2e712"
+authors = ["Petr Krysl <pkrysl@ucsd.edu>"]
+version = "0.1.0"
+
+[compat]
+julia = "^1.9"
